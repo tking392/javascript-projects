@@ -9,4 +9,8 @@
    multi-line
    comments. */
 
+   // These comments will be useful later when I forget why i decided to do the code this way. 
+
+   /* This comment explains how I fixed the last code and how it works now! */
+
    console.log("Comments make your code more readable by others.");

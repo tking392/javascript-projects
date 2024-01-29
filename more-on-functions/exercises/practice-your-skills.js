@@ -27,3 +27,17 @@ c) Print the new array to confirm your work.
 */
 
 let arr = ['Elocution', 21, 'Clean teeth', 100];
+
+let tripleNumReplace = function(n) {
+    if (typeof n === "number") {
+        return n*3;
+    } else if (typeof n === "string") {
+        return "ARRR!";
+    } 
+    return n;
+};
+
+let tripled = arr.map(tripleNumReplace);
+
+console.log(arr);
+console.log(tripled);

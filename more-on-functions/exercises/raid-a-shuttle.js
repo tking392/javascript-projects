@@ -8,6 +8,18 @@ function checkFuel(level) {
   }
 }
 
+let siphonFuel = function(n) {
+  if (checkFuel(n) === 'green') {
+    return n - 100001;
+  } 
+  else if (checkFuel(n) === 'yellow') {
+    return n - 50001;
+  }
+  else {
+    return n;
+  }
+};
+
 function holdStatus(arr){
   if (arr.length < 7) {
     return `Spaces available: ${7-arr.length}.`;
@@ -18,10 +30,11 @@ function holdStatus(arr){
   }
 }
 
-let fuelLevel = 200000;
+let fuelLevel = 100000;
 let cargoHold = ['meal kits', 'space suits', 'first-aid kit', 'satellite', 'gold', 'water', 'AE-35 unit'];
 
-console.log("Fuel level: " + checkFuel(fuelLevel));
+console.log("Fuel level: " + checkFuel(siphonFuel(fuelLevel)));
+console.log(siphonFuel(fuelLevel));
 console.log("Hold status: " + holdStatus(cargoHold));
 
 /* Steal some fuel from the shuttle:
@@ -53,5 +66,4 @@ console.log("Hold status: " + holdStatus(cargoHold));
 	
 //b). Call your anonymous fuel and cargo functions from within irs.
 
-//c). Use a template literal to return, "Raided _____ kg of fuel from the tanks, and stole ____ and ____ from the cargo hold."
-
+//c). Use a template literal to return, "Raided _____ kg of fuel from the tanks, and stole ____ and ____ from the cargo hold." */

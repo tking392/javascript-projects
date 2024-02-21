@@ -46,12 +46,12 @@ function reverseCharacters(input) {
 }
 
 // Tests
-// console.log(reverseCharacters(1234));
-// console.log(reverseCharacters('LC101'));
-// console.log(reverseCharacters(86735309));
-// console.log(reverseCharacters('radar'));
-// let myVariableName = "Toisu";
-// console.log(reverseCharacters(myVariableName));
+console.log(reverseCharacters(1234));
+console.log(reverseCharacters('LC101'));
+console.log(reverseCharacters(86735309));
+console.log(reverseCharacters('radar'));
+let myVariableName = "Toisu";
+console.log(reverseCharacters(myVariableName));
 
 
 // Part Three: Complete Reversal
@@ -87,10 +87,26 @@ console.log(completeReversal(arrayTest3));
 // 3. Retrieve only the first 3 characters from strings with lengths larger than 3.
 // 4. Use a template literal to return the phrase We put the '___' in '___'. Fill the first blank with the modified string, and fill the second blank with the original string.
 
+function funPhrase(funInput) {
+    let lastChar = '';
+    if (funInput.length < 4) {
+        lastChar = funInput[funInput.length - 1] 
+    } else {
+        lastChar = funInput.slice(0,3);
+    }
+    return (`We put the '${lastChar}' in '${funInput}'.`)
+}
+
 // Test Function
 
 // 1. Outside of the function, define the variable str and initialize it with a string (e.g. 'Functions rock!').
 // 2. Call your function and print the returned phrase.
+
+let str = 'Functions rock!'
+console.log(funPhrase(str));
+console.log(funPhrase("wim"));
+console.log(funPhrase("wee woo wee woo wee woo"));
+
 
 // Area of rectangle equal to length x width
 
@@ -99,3 +115,10 @@ console.log(completeReversal(arrayTest3));
 // 3. Call your area function by passing in two arguments - the length and width.
 // 4. If only one argument is passed to the function, then the shape is a square. Modify your code to deal with this case.
 // 5. Use a template literal to print, “The area is ____ cm^2.”
+
+function areaOfRectangle(length, width = length) {
+    let area = length * width;
+    return area;
+}
+
+console.log(`The area is ${areaOfRectangle(5)} cm^2.`);

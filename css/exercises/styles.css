@@ -2,3 +2,23 @@
 body {
     background-color: yellow;
 }
+
+#cool-text {
+    color:blue;
+}
+
+#list-color {
+    color:blueviolet;
+}
+
+.center{
+  text-align: center;  
+}
+
+p {
+    color: green;
+}
+
+h1 {
+    font-size:36px;
+}

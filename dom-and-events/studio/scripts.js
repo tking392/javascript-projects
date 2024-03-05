@@ -12,11 +12,11 @@ function init() {
     const spaceShuttleHeight = document.getElementById("spaceShuttleHeight");
     const rocket = document.getElementById("rocket");
     //setting the rocket img position
-    rocket.style.position="relative";  
-    rocket.style.left="0px";  
-    rocket.style.top="0px";  
-    rocket.style.right="0px";  
-    rocket.style.down="0px"
+    rocket.style.position = "relative";  
+    rocket.style.left = "0px";  
+    rocket.style.top = "0px";  
+    rocket.style.right = "0px";  
+    rocket.style.down = "0px"
     // Write your JavaScript code here.
 
     //2. When the “Take off” button is clicked, the following should happen:
@@ -61,15 +61,14 @@ function init() {
         //a. The rocket image should move 10 px in the direction of the button that was clicked.
         rocket.style.top = parseInt(rocket.style.top) - 10 + 'px';
         //b. If the “Up” or “Down” buttons were clicked, then the shuttle height should increase or decrease by 10,000 miles.
-         
+        spaceShuttleHeight.innerHTML = parseInt(spaceShuttleHeight.innerHTML) + 10000; 
     });    
 
     downButton.addEventListener('click', function () {
         //a. The rocket image should move 10 px in the direction of the button that was clicked.
         rocket.style.top = parseInt(rocket.style.top) + 10 + 'px';
-      
         //b. If the “Up” or “Down” buttons were clicked, then the shuttle height should increase or decrease by 10,000 miles.
-        
+        spaceShuttleHeight.innerHTML = parseInt(spaceShuttleHeight.innerHTML) - 10000; 
     }); 
     
     leftButton.addEventListener('click', function () {
